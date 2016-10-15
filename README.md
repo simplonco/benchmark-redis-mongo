@@ -1,4 +1,4 @@
-redis vs mongo
+# redis vs mongo [![Build Status](https://travis-ci.org/simplonco/ruby-benchmark-redis-mongo.svg?branch=master)](https://travis-ci.org/simplonco/ruby-benchmark-redis-mongo)
 ### Benchmark-redis VS mongo
 =====================
 #### Benchmarking Redis and MongoDB with Ruby
