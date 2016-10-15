@@ -27,13 +27,12 @@ $ tar xzf redis-2.8.4.tar.gz
 $ cd redis-2.8.4
 $ make
 ```
-[(source)[http://redis.io/download]]
+_[source](http://redis.io/download)_
 
-Installer la (gem redis)[https://github.com/redis/redis-rb]
+Installer la [gem redis](https://github.com/redis/redis-rb) :
 
-[dans votre Gemfile] `gem "redis"`
-
-[dans votre application ruby]
+* _dans votre Gemfile :_ `gem "redis"`
+* _dans votre application ruby :_
 ```ruby
 require 'redis'
 $r = Redis.new(:host => 'localhost', :port => 6379)
@@ -41,7 +40,7 @@ $r = Redis.new(:host => 'localhost', :port => 6379)
 
 ### Structure
 
-simple [clé: valeur](http://redis.io/commands#generic)
+Simple [clé: valeur](http://redis.io/commands#generic)
 
 exemple: 
 ```ruby
@@ -52,20 +51,15 @@ redis.get("mykey")
 ```
 [hash](http://redis.io/commands#hash)
 
-clé1erniveau:
-
-    {
-
+```json
+clé1erniveau: {
     clé2iemeniveau: valeur,
-
     clé2iemeniveau: valeur,
-
-    clé2iemeniveau:
-
-    {clé3iemeniveau: valeur}
-
+    clé2iemeniveau: {
+        clé3iemeniveau: valeur
     }
-
+}
+```
 
 ## [Mongo](http://mongodb.org)
 
@@ -73,18 +67,18 @@ C'est une autre forme de base de données, axé sur le non-relationnel. Pratique
 
 [Installer Mongo sur votre machine](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/)
 
-[Gem] `gem install mongo`
+_Gem :_ `gem install mongo`
 
 [Github](https://github.com/mongodb/mongo-ruby-driver)
 
 
 ## Benchmark
 
-dans le dossier de l'appli, depuis le terminal :
+Dans le dossier de l'appli, depuis le terminal :
 ```shell
 pry
 ```
-[puis dans pry]
+puis dans pry :
 ```ruby
 require './populate_task_mongo.rb'
 ```
@@ -94,7 +88,7 @@ require './bm_all_task_mongo.rb'
 ```
 (output le temps qu'il met pour tous les récupérer)
 
-(même démarche avec Redis)
+Même démarche avec Redis :
 ```ruby
 require './populate_task_redis.rb'
 require './bm_all_task_redis.rb'
